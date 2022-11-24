@@ -1,0 +1,23 @@
+{% extends 'reviews/base.html' %}
+
+{% block title %}
+Single Review
+{% endblock title %}
+
+{% block content %}
+{% comment %} {{ singleReview.user_name }} this id for templateview {% endcomment %}
+{{review.user_name}}   {% comment %}  this is for detailview jo data ko model k name ko small letter m 
+apne aap convert krke template m bhej deta h    {% endcomment %}
+{{review.rating}}
+
+{% if is_favorite %}
+    <p>this is my favourite</p>
+{% else %}
+    <form action="/reviews/favourite" method="POST">
+        {% csrf_token %}      
+        <input type="hidden" name="review_id" value="{{review.id}}">
+        <button>favourite</button>
+    </form>
+{%endif%}
+
+{% endblock content %}

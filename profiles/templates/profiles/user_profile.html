@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Profiles</title>
+</head>
+<body>
+    <ul>
+        {% for profile in  profiles %}
+          <li> <img src="{{profile.image.url }}" alt="nahi hai"> </li>  
+          {% comment %} image ki bhi kuch prop hai jese url or path {% endcomment %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
