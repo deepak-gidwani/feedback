@@ -138,6 +138,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+uploads/images/
+temp/
+staticfiles/
 
 # Spyder project settings
 .spyderproject
